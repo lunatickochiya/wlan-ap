@@ -8,28 +8,32 @@ feeds:
 
 include:
   - webui
-  - openflow
-  - fbwifi
-  - chilli-redirect
   - qosify
 
 packages:
   - atfpolicy
   - kmod-batman-adv
   - batctl-default
+  - bind-dig
+  - bridger
   - cJSON
   - curl
   - dnsmasq-full
   - dynamic-vlan
   - firstcontact
   - gre
+  - ethtool
+  - hostapd-utils
   - ieee8021x
   - igmpproxy
   - ip-bridge
   - kmod-sched-bpf
+  - kmod-usb-acm
   - lldpd
-  - maverick
-  - opennds
+  - uspot
+  - spotfilter
+  - switch-fabric
+  - radius-gw-proxy
   - radsecproxy
   - ratelimit
   - rtty-openssl
@@ -40,18 +44,30 @@ packages:
   - ucentral-dataplane
   - ucentral-event
   - ucentral-schema
-  - ucentral-wifi
+  - ucentral-state
   - ucentral-tools
+  - udhcpinject
+  - udhcprelay
+  - ufp
+  - ugps
+  - rrmd
+  - ucrun
   - ucode
   - udhcpsnoop
   - udnssnoop
   - usteer
+  - usteer2
   - ustp
   - libustream-openssl
+  - openssl-util
   - udevmand
+  - udevstats
   - umdns
+  - oping
   - vxlan
+  - wireless-regdb
   - wpad-openssl
+  - cloud_discovery
 diffconfig: |
   CONFIG_OPENSSL_ENGINE=y
   CONFIG_OPENSSL_PREFER_CHACHA_OVER_GCM=y
@@ -65,6 +81,7 @@ diffconfig: |
   CONFIG_OPENSSL_WITH_TLS13=y
   # CONFIG_PACKAGE_wpad is not set
   # CONFIG_PACKAGE_wpad-basic-wolfssl is not set
+  # CONFIG_PACKAGE_wpad-basic-mbedtls is not set
   # CONFIG_PACKAGE_dnsmasq is not set 
   CONFIG_IMAGEOPT=y
   CONFIG_PREINITOPT=y

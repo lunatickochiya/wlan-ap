@@ -3,14 +3,15 @@
 	"radios": [
 		{
 			"band": "2G",
-			"country": "CA",
+			"country": "US",
 			"channel-mode": "HE",
-			"channel-width": 40
+			"channel-width": 20
 		}, {
 			"band": "5G",
-			"country": "CA",
+			"country": "US",
 			"channel-mode": "HE",
-			"channel-width": 80
+			"channel-width": 80,
+			"channel": 36
 		}
 	],
 
@@ -68,6 +69,11 @@
 	"services": {
 		"ssh": {
 			"port": 22
+		},
+		"admin-ui": {
+			"wifi-ssid": "Maverick",
+			"wifi-bands": [ "5G" ],
+			"offline-trigger": 300
 		}
 	}
 }

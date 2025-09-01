@@ -4,15 +4,9 @@ target: ipq40xx
 subtarget: generic
 description: Build image for the Edgecore ECW5211
 image: bin/targets/ipq40xx/generic/openwrt-ipq40xx-generic-edgecore_ecw5211-squashfs-nand-sysupgrade.bin
+packages:
+  - ipq40xx
 include:
   - ucentral-ap
-  - wifi-ath10k
-  - container
-packages:
-  - kmod-bluetooth
-  - kmod-usb-serial
-  - kmod-usb-serial-option
-  - bluez-libs
-  - bluez-daemon
-  - bluez-utils
-  - usbutils
+  - hostapd
+  - target-ipq40xx
